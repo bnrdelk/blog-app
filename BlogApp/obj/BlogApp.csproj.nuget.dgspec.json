@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/beyzanurdeliktas/Desktop/Blog/BlogApp/BlogApp.csproj": {}
+    "/Users/beyzanurdeliktas/Downloads/blog-app-main/BlogApp/BlogApp.csproj": {}
   },
   "projects": {
-    "/Users/beyzanurdeliktas/Desktop/Blog/BlogApp/BlogApp.csproj": {
+    "/Users/beyzanurdeliktas/Downloads/blog-app-main/BlogApp/BlogApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/beyzanurdeliktas/Desktop/Blog/BlogApp/BlogApp.csproj",
+        "projectUniqueName": "/Users/beyzanurdeliktas/Downloads/blog-app-main/BlogApp/BlogApp.csproj",
         "projectName": "BlogApp",
-        "projectPath": "/Users/beyzanurdeliktas/Desktop/Blog/BlogApp/BlogApp.csproj",
+        "projectPath": "/Users/beyzanurdeliktas/Downloads/blog-app-main/BlogApp/BlogApp.csproj",
         "packagesPath": "/Users/beyzanurdeliktas/.nuget/packages/",
-        "outputPath": "/Users/beyzanurdeliktas/Desktop/Blog/BlogApp/obj/",
+        "outputPath": "/Users/beyzanurdeliktas/Downloads/blog-app-main/BlogApp/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/beyzanurdeliktas/.nuget/NuGet/NuGet.Config"

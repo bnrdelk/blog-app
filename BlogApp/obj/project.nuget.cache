@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "NSggX17D2iaqtkham1kuxgJSzmsGeaazhOTvU5RTr9BFTknaSpNxVnnYvrgm1jKgy7bE2TpiQWqUwYxStpO/ug==",
+  "dgSpecHash": "LuKHxyQMj6VC+YlPJEPWwPCgQFyE/3od5qEiOuE4Wjb2kwwEfwdjeW7BrpEDT5KqR8ewFumNZntLh+yWpHppSQ==",
   "success": true,
-  "projectFilePath": "/Users/beyzanurdeliktas/Desktop/Blog/BlogApp/BlogApp.csproj",
+  "projectFilePath": "/Users/beyzanurdeliktas/Downloads/blog-app-main/BlogApp/BlogApp.csproj",
   "expectedPackageFiles": [
     "/Users/beyzanurdeliktas/.nuget/packages/humanizer.core/2.14.1/humanizer.core.2.14.1.nupkg.sha512",
     "/Users/beyzanurdeliktas/.nuget/packages/microsoft.bcl.asyncinterfaces/6.0.0/microsoft.bcl.asyncinterfaces.6.0.0.nupkg.sha512",

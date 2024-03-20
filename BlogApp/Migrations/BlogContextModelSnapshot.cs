@@ -62,6 +62,9 @@ namespace BlogApp.Migrations
                     b.Property<string>("Content")
                         .HasColumnType("longtext");
 
+                    b.Property<string>("Image")
+                        .HasColumnType("longtext");
+
                     b.Property<bool>("IsPublic")
                         .HasColumnType("tinyint(1)");
 
@@ -104,6 +107,9 @@ namespace BlogApp.Migrations
                         .HasColumnType("int");
 
                     MySqlPropertyBuilderExtensions.UseMySqlIdentityColumn(b.Property<int>("UserId"));
+
+                    b.Property<string>("Image")
+                        .HasColumnType("longtext");
 
                     b.Property<string>("UserName")
                         .HasColumnType("longtext");
