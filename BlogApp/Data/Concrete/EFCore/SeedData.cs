@@ -48,6 +48,7 @@ namespace BlogApp.Data.Concrete.EFCore
                             Title = "Asp.Net Core MVC",
                             Content = "Asp.Net Core MVC content",
                             IsPublic = true,
+                            Image = "2.png",
                             PublishTime = DateTime.Now.AddDays(-10), // 10 days ago
                             Tags = context.Tags.Take(3).ToList(), // add tags - first 3
                             UserId = 1
@@ -56,6 +57,7 @@ namespace BlogApp.Data.Concrete.EFCore
                             Title = "Spring Framework",
                             Content = "Spring Framework content",
                             IsPublic = true,
+                            Image = "1.png",
                             PublishTime = DateTime.Now.AddDays(-20), 
                             Tags = context.Tags.Take(2).ToList(),
                             UserId = 2
@@ -64,6 +66,7 @@ namespace BlogApp.Data.Concrete.EFCore
                             Title = "Java EE",
                             Content = "Java EE content",
                             IsPublic = true,
+                            Image = "3.webp",
                             PublishTime = DateTime.Now.AddDays(-5),
                             Tags = context.Tags.Take(4).ToList(),
                             UserId = 2

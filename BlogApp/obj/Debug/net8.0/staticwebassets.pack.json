@@ -1,0 +1,37 @@
+{
+  "Files": [
+    {
+      "Id": "/Users/beyzanurdeliktas/Downloads/blog-app-main/BlogApp/wwwroot/css/style.css",
+      "PackagePath": "staticwebassets/css/style.css"
+    },
+    {
+      "Id": "/Users/beyzanurdeliktas/Downloads/blog-app-main/BlogApp/wwwroot/img/1.png",
+      "PackagePath": "staticwebassets/img/1.png"
+    },
+    {
+      "Id": "/Users/beyzanurdeliktas/Downloads/blog-app-main/BlogApp/wwwroot/img/2.png",
+      "PackagePath": "staticwebassets/img/2.png"
+    },
+    {
+      "Id": "/Users/beyzanurdeliktas/Downloads/blog-app-main/BlogApp/wwwroot/img/3.webp",
+      "PackagePath": "staticwebassets/img/3.webp"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.BlogApp.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.build.BlogApp.props",
+      "PackagePath": "build\\BlogApp.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.buildMultiTargeting.BlogApp.props",
+      "PackagePath": "buildMultiTargeting\\BlogApp.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.buildTransitive.BlogApp.props",
+      "PackagePath": "buildTransitive\\BlogApp.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

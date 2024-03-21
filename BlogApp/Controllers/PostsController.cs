@@ -19,14 +19,9 @@ namespace BlogApp.Controllers
             return View(
                 new PostsViewModel 
                 {
-                    Posts = _postRepository.Posts.ToList()
+                    Posts = _postRepository.Posts.ToList(),
                 }
             );
-        }
-
-        public async Task<IActionResult> Details(int? id)
-        {
-            return View(await _postRepository.Posts.FirstOrDefaultAsync(p => p.PostId == id));
         }
     }
 }

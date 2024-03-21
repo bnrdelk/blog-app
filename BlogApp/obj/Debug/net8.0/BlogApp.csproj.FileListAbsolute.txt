@@ -250,3 +250,4 @@
 /Users/beyzanurdeliktas/Downloads/blog-app-main/BlogApp/obj/Debug/net8.0/ref/BlogApp.dll
 /Users/beyzanurdeliktas/Downloads/blog-app-main/BlogApp/obj/Debug/net8.0/BlogApp.RazorAssemblyInfo.cache
 /Users/beyzanurdeliktas/Downloads/blog-app-main/BlogApp/obj/Debug/net8.0/BlogApp.RazorAssemblyInfo.cs
+/Users/beyzanurdeliktas/Downloads/blog-app-main/BlogApp/bin/Debug/net8.0/BlogApp.staticwebassets.runtime.json

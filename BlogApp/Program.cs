@@ -20,6 +20,8 @@ builder.Services.AddScoped<ITagRepository, EfTagRepository>();
 
 var app = builder.Build();
 
+app.UseStaticFiles();
+
 SeedData.CreateSeedData(app); // app başlangıcı ile seed datayı olustur
 
 //app.MapGet("/", () => "Hello World!");
