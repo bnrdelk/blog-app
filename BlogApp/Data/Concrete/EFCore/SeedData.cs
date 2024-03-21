@@ -23,11 +23,11 @@ namespace BlogApp.Data.Concrete.EFCore
                 if(!context.Tags.Any())
                 {
                     context.Tags.AddRange(
-                        new Tag { Text = ".Net" },
-                        new Tag { Text = "C#" },
-                        new Tag { Text = "Spring" },
-                        new Tag { Text = "Java" },
-                        new Tag { Text = "ReactJs" }
+                        new Tag { Text = ".Net", Url="dotnet"},
+                        new Tag { Text = "C#" , Url="c#"},
+                        new Tag { Text = "Spring" , Url="spring"},
+                        new Tag { Text = "Java" , Url="java"},
+                        new Tag { Text = "ReactJs", Url="reactjs"}
                     );
                     context.SaveChanges();
                 }
@@ -47,6 +47,7 @@ namespace BlogApp.Data.Concrete.EFCore
                         new Post {
                             Title = "Asp.Net Core MVC",
                             Content = "Asp.Net Core MVC content",
+                            Url="asp-net-core",
                             IsPublic = true,
                             Image = "2.png",
                             PublishTime = DateTime.Now.AddDays(-10), // 10 days ago
@@ -56,6 +57,7 @@ namespace BlogApp.Data.Concrete.EFCore
                         new Post {
                             Title = "Spring Framework",
                             Content = "Spring Framework content",
+                            Url="spring-framework",
                             IsPublic = true,
                             Image = "1.png",
                             PublishTime = DateTime.Now.AddDays(-20), 
@@ -65,9 +67,30 @@ namespace BlogApp.Data.Concrete.EFCore
                         new Post {
                             Title = "Java EE",
                             Content = "Java EE content",
+                            Url="java-ee",
                             IsPublic = true,
                             Image = "3.webp",
                             PublishTime = DateTime.Now.AddDays(-5),
+                            Tags = context.Tags.Take(4).ToList(),
+                            UserId = 2
+                        },
+                        new Post {
+                            Title = "C# Language",
+                            Content = "C# Language content",
+                            Url="c#-language",
+                            IsPublic = true,
+                            Image = "3.webp",
+                            PublishTime = DateTime.Now.AddDays(-9),
+                            Tags = context.Tags.Take(4).ToList(),
+                            UserId = 2
+                        },
+                        new Post {
+                            Title = "ReactJS Framework",
+                            Content = "ReactJS Framework content",
+                            Url="reactjs-framework",
+                            IsPublic = true,
+                            Image = "2.webp",
+                            PublishTime = DateTime.Now.AddDays(-1),
                             Tags = context.Tags.Take(4).ToList(),
                             UserId = 2
                         }

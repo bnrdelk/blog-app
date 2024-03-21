@@ -23,5 +23,13 @@ namespace BlogApp.Controllers
                 }
             );
         }
+
+        public async Task<IActionResult> Details(int? id)
+        {
+
+            return View(await _postRepository
+                                .Posts
+                                .FirstOrDefaultAsync(p => p.PostId == id));
+        }
     }
 }

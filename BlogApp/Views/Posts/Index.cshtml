@@ -1,7 +1,7 @@
 @model PostsViewModel
 
 <div class="row">
-    <div class="col-lg-8">
+    <div class="col-lg-9">
         <div class="bg-white p-4">
             <h1 class="h2 mb-3 fw-bold">Popular posts on bloggie</h1>
             @foreach(var p in Model.Posts)
@@ -9,7 +9,7 @@
                 <div class="card bg-transparent border-0 mb-3">
                     <div class="row">
                         <div class="col-10">
-                            <h5><a href="" class="btn btn-link text-decoration-none text-dark fw-bold">@p.Title</a></h5>
+                            <h5><a asp-action="Details" asp-route-id="@p.PostId" class="btn btn-link text-decoration-none text-dark fw-bold">@p.Title</a></h5>
                             <p>@p.Content</p>
                         </div>
                         <div class="col-2">
@@ -28,8 +28,9 @@
             </nav>
         </div>
     </div>
-    <div class="col-lg-4">
+    <div class="col-lg-3">
         @await Component.InvokeAsync("TagsMenu");
+        @await Component.InvokeAsync("NewPostsMenu");
     </div>
 </div>
 
