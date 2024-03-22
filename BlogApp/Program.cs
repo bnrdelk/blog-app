@@ -24,7 +24,17 @@ app.UseStaticFiles();
 
 SeedData.CreateSeedData(app); // app başlangıcı ile seed datayı olustur
 
-//app.MapGet("/", () => "Hello World!");
-app.MapDefaultControllerRoute();
+// sabit kısım (posts) gördükte sonra eşleştirme yapacağı kısım;
+app.MapControllerRoute(
+    name: "post_details",
+    pattern: "posts/{url}",
+    defaults: new {controller="Posts",action="Details"}
+);
+
+app.MapControllerRoute(
+    name: "default",
+    pattern: "{controller=Home}/{action=Index}/{id?}"
+);
+
 
 app.Run();

@@ -9,7 +9,7 @@
                 <div class="card bg-transparent border-0 mb-3">
                     <div class="row">
                         <div class="col-10">
-                            <h5><a asp-action="Details" asp-route-id="@p.PostId" class="btn btn-link text-decoration-none text-dark fw-bold">@p.Title</a></h5>
+                            <h5><a href="/posts/@p.Url" class="btn btn-link text-decoration-none text-dark fw-bold">@p.Title</a></h5>
                             <p>@p.Content</p>
                         </div>
                         <div class="col-2">
