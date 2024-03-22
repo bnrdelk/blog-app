@@ -13,13 +13,19 @@ namespace BlogApp.Controllers
         public PostsController(IPostRepository postRepository)
         {
             _postRepository = postRepository;
-        }
-        public IActionResult Index()
+        }ç
+        public async Task<IActionResult> Index(string url)
         {
+            var posts = _postRepository.Posts;
+
+            if(!string.IsNullOrEmpty(url))
+            {
+                posts = posts.Where(p => p.Tags.Any(t => t.Url == url));
+            }
             return View(
                 new PostsViewModel 
                 {
-                    Posts = _postRepository.Posts.ToList(),
+                    Posts = await posts.ToListAsync()
                 }
             );
         }
