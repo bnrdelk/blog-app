@@ -5,3 +5,11 @@ body {
     font-weight: 300;
     font-style: normal;
 }
+.content-img {
+    width: 400px;
+    height: 300px;
+}
+.avatar {
+    width: 10px;
+    height: 10px;
+}

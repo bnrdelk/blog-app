@@ -9,15 +9,38 @@
                 <a href="" class="badge bg-secondary">test tag</a>
                 <a href="" class="badge bg-secondary">test tag</a>
             </div>
-            <img src="~/img/@Model.Image" class="img-fluid rounded" alt="@Model.Title's image">
+            <img src="~/img/@Model.Image" class="content-img img-fluid rounded" alt="@Model.Title's image">
             <div>
                 @Model.Content
             </div>
         </div>
+        <div class="bg-white mt-3">
+            <div class="card border-0">
+                <div class="card-header pb-0">
+                    <h4>@Model.Comments.Count() Comments</h4>
+                </div>
+                <div class="card-body">
+                    @foreach(var c in Model.Comments)
+                    {
+                        <div class="my-4 d-flex">
+                            <img src="/img/@c.User.Image" alt="" class="avatar rounded-circle float-start-me-3">
+                        </div>
+                        <div>
+                            <div class="mb-2">
+                                <h6>@c.User.UserName</h6>
+                                <span>@c.PublishTime</span>
+                            </div>
+                            <p>@c.Text</p>
+                        </div>
+
+                    }
+                </div>
+            </div>
+        </div>
     </div>
     <div class="col-lg-3">
-        @await Component.InvokeAsync("TagsMenu");
-        @await Component.InvokeAsync("NewPostsMenu");
+        @await Component.InvokeAsync("TagsMenu")
+        @await Component.InvokeAsync("NewPostsMenu")
     </div>
 </div>
 

@@ -35,8 +35,8 @@ namespace BlogApp.Data.Concrete.EFCore
                 if(!context.Users.Any())
                 {
                     context.Users.AddRange(
-                        new User { UserName = "beyzanurdeliktas"},
-                        new User { UserName = "johndoe"}
+                        new User { UserName = "beyzanurdeliktas", Image="female.jpg" },
+                        new User { UserName = "johndoe", Image="male.jpg" }
                     );
                     context.SaveChanges();
                 }
@@ -52,7 +52,11 @@ namespace BlogApp.Data.Concrete.EFCore
                             Image = "2.png",
                             PublishTime = DateTime.Now.AddDays(-10), // 10 days ago
                             Tags = context.Tags.Take(3).ToList(), // add tags - first 3
-                            UserId = 1
+                            UserId = 1,
+                            Comments = new List<Comment> {
+                                 new Comment{Text = "Awesome, keep going on!", PublishTime = new DateTime(), UserId = 2},
+                                 new Comment{Text = "Thanks!", PublishTime = new DateTime(), UserId = 1}
+                                  }
                         },
                         new Post {
                             Title = "Spring Framework",

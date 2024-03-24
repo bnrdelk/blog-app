@@ -13,7 +13,7 @@ namespace BlogApp.Controllers
         public PostsController(IPostRepository postRepository)
         {
             _postRepository = postRepository;
-        }ç
+        }
         public async Task<IActionResult> Index(string url)
         {
             var posts = _postRepository.Posts;
@@ -35,6 +35,8 @@ namespace BlogApp.Controllers
 
             return View(await _postRepository
                                 .Posts
+                                .Include(p => p.Comments)
+                                .ThenInclude(p => p.User)//her gitmis oldugun commentin userına git (gidip tkerar sorgu yaptıgından dolayı then)
                                 .FirstOrDefaultAsync(p => p.Url == url));
         }
     }

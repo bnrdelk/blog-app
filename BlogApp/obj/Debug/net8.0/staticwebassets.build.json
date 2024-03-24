@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "enmsG1y8I3Awi+IVJaw+Dkz1AKEENeM6S6oNjLuLtlw=",
+  "Hash": "T/jPpol4c1Qml//HwpAhdvXEx/MKx0yrj26sdlR9XhE=",
   "Source": "BlogApp",
   "BasePath": "_content/BlogApp",
   "Mode": "Default",
@@ -91,6 +91,44 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/img/3.webp"
+    },
+    {
+      "Identity": "/Users/beyzanurdeliktas/Downloads/blog-app-main/BlogApp/wwwroot/img/female.jpg",
+      "SourceId": "BlogApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/beyzanurdeliktas/Downloads/blog-app-main/BlogApp/wwwroot/",
+      "BasePath": "_content/BlogApp",
+      "RelativePath": "img/female.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/img/female.jpg"
+    },
+    {
+      "Identity": "/Users/beyzanurdeliktas/Downloads/blog-app-main/BlogApp/wwwroot/img/male.jpg",
+      "SourceId": "BlogApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/beyzanurdeliktas/Downloads/blog-app-main/BlogApp/wwwroot/",
+      "BasePath": "_content/BlogApp",
+      "RelativePath": "img/male.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/img/male.jpg"
     }
   ]
 }

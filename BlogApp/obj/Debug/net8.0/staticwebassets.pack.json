@@ -17,6 +17,14 @@
       "PackagePath": "staticwebassets/img/3.webp"
     },
     {
+      "Id": "/Users/beyzanurdeliktas/Downloads/blog-app-main/BlogApp/wwwroot/img/female.jpg",
+      "PackagePath": "staticwebassets/img/female.jpg"
+    },
+    {
+      "Id": "/Users/beyzanurdeliktas/Downloads/blog-app-main/BlogApp/wwwroot/img/male.jpg",
+      "PackagePath": "staticwebassets/img/male.jpg"
+    },
+    {
       "Id": "obj/Debug/net8.0/staticwebassets/msbuild.BlogApp.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
     },
