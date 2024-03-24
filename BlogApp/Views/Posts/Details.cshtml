@@ -5,9 +5,10 @@
         <div class="bg-white p-4">
             <h1 class="h4 mb-3 fw-bold">@Model.Title</h1>
             <div class="tags">
-                <a href="" class="badge bg-secondary">test tag</a>
-                <a href="" class="badge bg-secondary">test tag</a>
-                <a href="" class="badge bg-secondary">test tag</a>
+                @foreach(var t in Model.Tags)
+                {
+                    <a href="/posts/tag/@t.Url" class="badge bg-@t.Color">@t.Text</a>
+                }
             </div>
             <img src="~/img/@Model.Image" class="content-img img-fluid rounded" alt="@Model.Title's image">
             <div>

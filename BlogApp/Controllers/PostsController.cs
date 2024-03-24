@@ -35,6 +35,7 @@ namespace BlogApp.Controllers
 
             return View(await _postRepository
                                 .Posts
+                                .Include(p => p.Tags)
                                 .Include(p => p.Comments)
                                 .ThenInclude(p => p.User)//her gitmis oldugun commentin userına git (gidip tkerar sorgu yaptıgından dolayı then)
                                 .FirstOrDefaultAsync(p => p.Url == url));

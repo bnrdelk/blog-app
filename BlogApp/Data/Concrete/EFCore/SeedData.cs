@@ -23,11 +23,11 @@ namespace BlogApp.Data.Concrete.EFCore
                 if(!context.Tags.Any())
                 {
                     context.Tags.AddRange(
-                        new Tag { Text = ".Net", Url="dotnet"},
-                        new Tag { Text = "C#" , Url="c#"},
-                        new Tag { Text = "Spring" , Url="spring"},
-                        new Tag { Text = "Java" , Url="java"},
-                        new Tag { Text = "ReactJs", Url="reactjs"}
+                        new Tag { Text = ".Net", Url="dotnet", Color = TagColors.primary},
+                        new Tag { Text = "C#" , Url="c#", Color = TagColors.danger},
+                        new Tag { Text = "Spring" , Url="spring", Color = TagColors.warning},
+                        new Tag { Text = "Java" , Url="java", Color = TagColors.success},
+                        new Tag { Text = "ReactJs", Url="reactjs", Color = TagColors.secondary}
                     );
                     context.SaveChanges();
                 }
