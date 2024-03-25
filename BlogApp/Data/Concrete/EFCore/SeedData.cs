@@ -54,8 +54,8 @@ namespace BlogApp.Data.Concrete.EFCore
                             Tags = context.Tags.Take(3).ToList(), // add tags - first 3
                             UserId = 1,
                             Comments = new List<Comment> {
-                                 new Comment{Text = "Awesome, keep going on!", PublishTime = new DateTime(), UserId = 2},
-                                 new Comment{Text = "Thanks!", PublishTime = new DateTime(), UserId = 1}
+                                 new Comment{Text = "Awesome, keep going on!", PublishTime = DateTime.Now.AddDays(-10), UserId = 2},
+                                 new Comment{Text = "Thanks!", PublishTime = DateTime.Now.AddDays(-5), UserId = 1}
                                   }
                         },
                         new Post {

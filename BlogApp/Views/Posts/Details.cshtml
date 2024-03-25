@@ -10,7 +10,7 @@
                     <a href="/posts/tag/@t.Url" class="badge bg-@t.Color">@t.Text</a>
                 }
             </div>
-            <img src="~/img/@Model.Image" class="content-img img-fluid rounded" alt="@Model.Title's image">
+            <img src="~/img/@Model.Image" width="100%" height="270px" class="content-img rounded" alt="@Model.Title's image">
             <div>
                 @Model.Content
             </div>
@@ -23,18 +23,37 @@
                 <div class="card-body">
                     @foreach(var c in Model.Comments)
                     {
-                        <div class="my-4 d-flex">
-                            <img src="/img/@c.User.Image" alt="" class="avatar rounded-circle float-start-me-3">
-                        </div>
-                        <div>
-                            <div class="mb-2">
-                                <h6>@c.User.UserName</h6>
-                                <span>@c.PublishTime</span>
+                        <div class="d-flex">
+                            <div class="m-1 ">
+                                <img src="/img/@c.User.Image" alt="" id="avatar" class="rounded-circle float-start-me-3" width="55rem" height="55rem">
                             </div>
-                            <p>@c.Text</p>
+                            <div>
+                                <div class="mb-2 d-flex">
+                                    <h6 class="me-2">@c.User.UserName</h6>
+                                    <small>@c.PublishTime.ToString("G")</small>
+                                </div>
+                                <p>@c.Text</p>
+                            </div>
                         </div>
-
+                        
                     }
+                    <hr class="my-4">
+                    <h4>Add Comment</h4>
+                    <form action="/posts/AddComment" method="post">
+                        <input type="hidden" name="PostId" value="@Model.PostId">
+                        <input type="hidden" name="Url" value="@Model.Url"> <!-- url'i gönder -> sayfa yenilensin -> yeni yorum görünsün-->
+                        <div class="mb-3">
+                            <label for="UserName" class="form-label">UserName</label>
+                            <input type="text" name="UserName" id="UserName" class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            <label for="Text" class="form-label">Comment</label>
+                            <textarea type="text" name="Text" id="Text" rows="3" class="form-control"></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <button type="submit" class="btn btn-primary">Send</button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>

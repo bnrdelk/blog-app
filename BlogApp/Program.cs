@@ -17,6 +17,7 @@ builder.Services.AddDbContext<BlogContext>(options => { // BlogContext DbContext
 
 builder.Services.AddScoped<IPostRepository, EfPostRepository>();
 builder.Services.AddScoped<ITagRepository, EfTagRepository>();
+builder.Services.AddScoped<ICommentRepository, EfCommentRepository>();
 
 var app = builder.Build();
 
@@ -27,7 +28,7 @@ SeedData.CreateSeedData(app); // app başlangıcı ile seed datayı olustur
 // sabit kısım (posts) gördükte sonra eşleştirme yapacağı kısım;
 app.MapControllerRoute(
     name: "post_details",
-    pattern: "posts/{url}",
+    pattern: "posts/details/{url}",
     defaults: new {controller="Posts",action="Details"}
 );
 
