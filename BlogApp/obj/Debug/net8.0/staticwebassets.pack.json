@@ -21,6 +21,10 @@
       "PackagePath": "staticwebassets/img/female.jpg"
     },
     {
+      "Id": "/Users/beyzanurdeliktas/Downloads/blog-app-main/BlogApp/wwwroot/img/icon.jpeg",
+      "PackagePath": "staticwebassets/img/icon.jpeg"
+    },
+    {
       "Id": "/Users/beyzanurdeliktas/Downloads/blog-app-main/BlogApp/wwwroot/img/male.jpg",
       "PackagePath": "staticwebassets/img/male.jpg"
     },

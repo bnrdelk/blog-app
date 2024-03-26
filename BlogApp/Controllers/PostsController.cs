@@ -4,6 +4,7 @@ using BlogApp.Data.Concrete.EFCore;
 using BlogApp.Models;
 using BlogApp.Entity;
 using Microsoft.EntityFrameworkCore;
+using System.Security.Claims;
 
 namespace BlogApp.Controllers
 {
@@ -19,6 +20,7 @@ namespace BlogApp.Controllers
         }
         public async Task<IActionResult> Index(string url)
         {
+            var claims = User.Claims;
             var posts = _postRepository.Posts;
 
             if(!string.IsNullOrEmpty(url))
@@ -44,16 +46,18 @@ namespace BlogApp.Controllers
                                 .FirstOrDefaultAsync(p => p.Url == url));
         }
 
-        public IActionResult AddComment(int PostId, string UserName, string Text, string Url)
+        public IActionResult AddComment(int PostId, string Text, string Url)
         {
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier); // NameIdentifier = Id 
+            var username = User.FindFirstValue(ClaimTypes.Name);
+            var profilepic = User.FindFirstValue(ClaimTypes.UserData);
+
             var entity = new Comment {
                 Text = Text,
                 PublishTime = DateTime.Now,
                 PostId = PostId,
                 // şimdilik yeni user oluşturulacak
-                User= new User {
-                    UserName = UserName, Image = "female.jpg"
-                }
+                UserId = int.Parse(userId ?? "")
             };
              _commentRepository.CreateComment(entity);
 

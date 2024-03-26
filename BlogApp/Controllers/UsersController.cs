@@ -42,7 +42,8 @@ namespace BlogApp.Controllers
                     userClaims.Add(new Claim(ClaimTypes.NameIdentifier, isUser.UserId.ToString()));
                     userClaims.Add(new Claim(ClaimTypes.Name, isUser.UserName ?? ""));
                     userClaims.Add(new Claim(ClaimTypes.GivenName, isUser.Name ?? ""));
-
+                    userClaims.Add(new Claim(ClaimTypes.UserData, isUser.Image ?? ""));
+                    
                     if(isUser.Email == "bnrdelk@icloud.com")
                     {
                         userClaims.Add(new Claim(ClaimTypes.Role, "admin"));
@@ -77,6 +78,37 @@ namespace BlogApp.Controllers
         {
             await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
             return RedirectToAction("Login");
+        }
+
+        public IActionResult Register()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Register(RegisterViewModel model)
+        {
+            if(ModelState.IsValid)  
+            {
+                var user = await _userRepository.Users.FirstOrDefaultAsync(x => x.UserName == model.UserName || x.Email == model.Email);
+                if(user == null)
+                {
+                    _userRepository.CreateUser(new User {
+                        UserName = model.UserName,
+                        Name = model.Name,
+                        Email = model.Email,
+                        Password = model.Password,
+                        Image = "icon.jpeg"
+                    });
+
+                return RedirectToAction("Login");
+                }
+                else
+                {
+                    ModelState.AddModelError("", "Username or Email already in use.");
+                }
+            }
+            return View(model);
         }
     }
     

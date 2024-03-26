@@ -37,23 +37,31 @@
                         </div>
                         
                     }
+                    
                     <hr class="my-4">
-                    <h4>Add Comment</h4>
-                    <form action="/posts/AddComment" method="post">
-                        <input type="hidden" name="PostId" value="@Model.PostId">
-                        <input type="hidden" name="Url" value="@Model.Url"> <!-- url'i gönder -> sayfa yenilensin -> yeni yorum görünsün-->
-                        <div class="mb-3">
-                            <label for="UserName" class="form-label">UserName</label>
-                            <input type="text" name="UserName" id="UserName" class="form-control">
+
+                    @if(User.Identity.IsAuthenticated)
+                    {
+                        
+                        <h4>Add Comment</h4>
+                        <form action="/posts/AddComment" method="post">
+                            <input type="hidden" name="PostId" value="@Model.PostId">
+                            <input type="hidden" name="Url" value="@Model.Url"> <!-- url'i gönder -> sayfa yenilensin -> yeni yorum görünsün-->
+                            <div class="mb-3">
+                                <label for="Text" class="form-label">Comment</label>
+                                <textarea type="text" name="Text" id="Text" rows="3" class="form-control"></textarea>
+                            </div>
+                            <div class="mb-3">
+                                <button type="submit" class="btn btn-primary">Send</button>
+                            </div>
+                        </form>
+                    }
+                    else
+                    {
+                        <div class="m-3">
+                            <p>For adding comments, you need to <a href="/users/login">Log in.</a></p>
                         </div>
-                        <div class="mb-3">
-                            <label for="Text" class="form-label">Comment</label>
-                            <textarea type="text" name="Text" id="Text" rows="3" class="form-control"></textarea>
-                        </div>
-                        <div class="mb-3">
-                            <button type="submit" class="btn btn-primary">Send</button>
-                        </div>
-                    </form>
+                    }
                 </div>
             </div>
         </div>
